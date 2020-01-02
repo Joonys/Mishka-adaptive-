@@ -1,0 +1,53 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin container {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: $tablet-widths) {
+    width: 668px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-widths) {
+    width: 1050px;
+    padding: 0 50px;
+  }
+}
+
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin pseudo {
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+@mixin block-title-text {
+  margin: 0;
+  font-size: 25px;
+  line-height: 30px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  color: $title-text-color;
+}
+
+@mixin block-title-text--tablet {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin block-title-text--desktop {
+  font-size: 53px;
+  line-height: 57px;
+}
