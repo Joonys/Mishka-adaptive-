@@ -1,0 +1,30 @@
+.order {
+  padding-bottom: 55px;
+}
+
+.order__description {
+  margin: 0;
+  margin-bottom: 23px;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+@media (min-width: $tablet-widths) {
+  .order {
+    padding-bottom: 50px;
+  }
+
+  .order__description {
+    margin-bottom: 20px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-widths) {
+  .order__description {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 21px;
+  }
+}
