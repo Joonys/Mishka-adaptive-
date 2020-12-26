@@ -18,14 +18,14 @@
   cursor: pointer;
 
   &--open {
-    background: url("../img/icon-menu-open.svg") no-repeat;
+    background: url('../img/icon-menu-open.svg') no-repeat;
   }
 
   &--close {
     top: 28px;
     width: 21px;
     height: 20px;
-    background: url("../img/icon-menu-close.svg") no-repeat;
+    background: url('../img/icon-menu-close.svg') no-repeat;
   }
 
   &:focus {
@@ -73,7 +73,7 @@
   border-top: 1px solid #ececec;
   font-size: 17px;
   line-height: 24px;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-family: 'Open Sans Bold', 'Arial', sans-serif;
   color: $title-text-color;
   text-decoration: none;
   background-color: #ffffff;

@@ -9,7 +9,7 @@ var modalOverlay = document.querySelector('.modal-overlay');
 var mapContainer = document.getElementById('map');
 
 /********** Открытие/закрытие меню **********/
-var closeMenu = function() {
+var closeMenu = function () {
   for (var i = 0; i < menu.length; i++) {
     menu[i].classList.add('main-menu__list--hide');
   }
@@ -17,7 +17,7 @@ var closeMenu = function() {
   btnMenu.classList.add('main-menu__button--open');
 };
 
-var openMenu = function() {
+var openMenu = function () {
   for (var i = 0; i < menu.length; i++) {
     menu[i].classList.remove('main-menu__list--hide');
   }
@@ -25,7 +25,7 @@ var openMenu = function() {
   btnMenu.classList.add('main-menu__button--close');
 };
 
-var enableJsMenu = function() {
+var enableJsMenu = function () {
   for (var i = 0; i < menu.length; i++) {
     menu[i].classList.remove('main-menu__list--no-js');
   }
@@ -37,7 +37,7 @@ if (btnCloseMenu && menu) {
   closeMenu();
 }
 
-btnMenu.addEventListener('click', function(event) {
+btnMenu.addEventListener('click', function (event) {
   btnCloseMenu = document.querySelector('.main-menu__button--close');
   btnOpenMenu = document.querySelector('.main-menu__button--open');
   menu = document.querySelectorAll('.main-menu__list');
@@ -55,18 +55,18 @@ btnMenu.addEventListener('click', function(event) {
 /******* Модальное окно "Добавление товара в корзину" *******/
 if (btnOpenCart && popupCart && btnCloseCart && modalOverlay) {
   for (var i = 0; i < btnOpenCart.length; i++) {
-    btnOpenCart[i].addEventListener('click', function(event) {
+    btnOpenCart[i].addEventListener('click', function (event) {
       event.preventDefault();
       popupCart.classList.add('modal--show');
       modalOverlay.classList.add('modal-overlay--show');
     });
   }
-  btnCloseCart.addEventListener('click', function(event) {
+  btnCloseCart.addEventListener('click', function (event) {
     event.preventDefault();
     popupCart.classList.remove('modal--show');
     modalOverlay.classList.remove('modal-overlay--show');
   });
-  window.addEventListener('keydown', function(event) {
+  window.addEventListener('keydown', function (event) {
     if (event.keyCode === 27) {
       if (popupCart.classList.contains('modal--show')) {
         popupCart.classList.remove('modal--show');
@@ -78,22 +78,22 @@ if (btnOpenCart && popupCart && btnCloseCart && modalOverlay) {
 
 /********** Карта **********/
 if (mapContainer) {
-  window.onload = function() {
+  window.onload = function () {
     var mapOptions = {
       zoom: 16,
-      center: new google.maps.LatLng(59.9369, 30.3218)
+      center: new google.maps.LatLng(59.9369, 30.3218),
     };
     var map = new google.maps.Map(mapContainer, mapOptions);
     var image = {
       url: 'img/icon-map-pin.svg',
-      scaledSize: new google.maps.Size(100, 100)
+      scaledSize: new google.maps.Size(100, 100),
     };
     var myLatLng = new google.maps.LatLng(59.9363, 30.3217);
     var beachMarker = new google.maps.Marker({
       position: myLatLng,
       map: map,
       optimized: false,
-      icon: image
+      icon: image,
     });
   };
 }

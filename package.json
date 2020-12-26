@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "project using gulp4",
   "author": "Yuriy Kletsko",
+  "homepage": "https://joonys.github.io/Mishka-adaptive-/",
   "devDependencies": {
     "autoprefixer": "^9.7.2",
     "browser-sync": "^2.26.7",
@@ -19,5 +20,15 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "panini": "^1.6.3"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0",
+    "node-sass": "^5.0.0"
   }
 }
